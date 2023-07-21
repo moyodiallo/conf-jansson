@@ -12,9 +12,9 @@ depends: [
   "conf-cmake"
 ]
 build: [
-    [cd "jansson"]
-    ["./configure" "--prefix" prefix]
-    [make]
+  ["./build.sh" prefix]
 ]
-install: [make "install"]
+install: [
+  ["./install.sh"]
+]
 dev-repo: "git+https://github.com/moyodiallo/conf-jansson.git"
